@@ -1,3 +1,5 @@
+# MADE BY FROJY :)
+
 $ErrorActionPreference = "SilentlyContinue"
 
 function SafeValue($v,$d="Unknown"){ if($null -eq $v -or $v -eq ""){$d}else{$v} }
