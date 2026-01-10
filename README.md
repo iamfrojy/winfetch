@@ -22,5 +22,4 @@ If you just want to use someone elses config, go into the same winfetch .ps1 fil
 If you need help, please contact "frojy" on discord.
 
 # Downloads
-To download winfetch please click on [this](https://github.com/iamfrojy/winfetch/releases/download/%23first/winfetch-installer.exe) link to download, or go to the releases tab and download the latest .exe file.
-You can also download the installer from the winfetch website!
+To download winfetch please click on [this](https://iamfrojy.github.io/winfetch) link to download, and click on "Download v1.0" button.
