@@ -17,6 +17,8 @@ To edit your config go to C:\winfetch\ and edit the .ps1 winfetch file.
 If you want to edit the logo find the "$logo = @(" string.
 Then place you ascii with each line of the ascii a seperate string in the array, with each string being in double quotes, and lines seperated with commas.
 
+If you just want to use someone elses config, go into the same winfetch .ps1 file and replace the code with the (name)config.ps1 file.
+
 If you need help, please contact "frojy" on discord.
 
 # Downloads
