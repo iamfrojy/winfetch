@@ -18,3 +18,6 @@ If you want to edit the logo find the "$logo = @(" string.
 Then place you ascii with each line of the ascii a seperate string in the array, with each string being in double quotes, and lines seperated with commas.
 
 If you need help, please contact "frojy" on discord.
+
+# Downloads
+To download winfetch please click on [this](https://github.com/iamfrojy/winfetch/releases/download/%23first/winfetch-installer.exe) link to download, or go to the releases tab, and download the latest .exe file.
