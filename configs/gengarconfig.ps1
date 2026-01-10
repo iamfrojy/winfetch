@@ -24,6 +24,9 @@ $diskTotal = [math]::Round($disk.Size / 1GB, 1)
 $diskFree  = [math]::Round($disk.FreeSpace / 1GB, 1)
 $diskUsed  = [math]::Round($diskTotal - $diskFree, 1)
 
+$ShellName = if ($PSVersionTable) { "PowerShell $($PSVersionTable.PSVersion)" } else { "Command Prompt" }
+$ShellName = if ($env:ComSpec -match "cmd.exe") { "Command Prompt" } else { $ShellName }
+
 $batt = Get-CimInstance Win32_Battery
 if ($batt) {
     $batteryInfo = "$($batt.EstimatedChargeRemaining)%"
@@ -57,6 +60,7 @@ $info = @(
 "GPU:      $($gpu.Name)",
 "Memory:   $freeMem GB Free / $totalMem GB",
 "Disk:     $diskUsed GB Used / $diskTotal GB",
+"Shell:    $ShellName",
 "Battery:  $batteryInfo"
 )
 
