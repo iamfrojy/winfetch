@@ -1,4 +1,12 @@
+# MADE BY FROJY :)
+
 $ErrorActionPreference = "SilentlyContinue"
+
+$esc = [char]27
+
+$white = "$esc[38;2;255;255;255m"
+$orange = "$esc[38;2;255;165;0m"
+$reset = "$esc[0m"
 
 function SafeValue($v,$d="Unknown"){ if($null -eq $v -or $v -eq ""){$d}else{$v} }
 
@@ -55,7 +63,7 @@ $logoWidth = ($logo | Measure-Object Length -Maximum).Maximum + 2
 for ($i = 0; $i -lt $maxLines; $i++) {
 
     if ($i -lt $logo.Count) {
-        Write-Host $logo[$i] -ForegroundColor White -NoNewline
+        Write-Host "$white$($logo[$i])$reset" -NoNewline
         $lineLength = $logo[$i].Length
         Write-Host (" " * ($logoWidth - $lineLength)) -NoNewline
     } else {
@@ -65,7 +73,7 @@ for ($i = 0; $i -lt $maxLines; $i++) {
     if ($i -lt $info.Count) {
         $parts = $info[$i] -split ":",2
         if ($parts.Count -eq 2) {
-            Write-Host "$($parts[0]):" -ForegroundColor Yellow -NoNewline
+            Write-Host "$orange$($parts[0]):$reset" -NoNewline
             Write-Host "$($parts[1])"
         } else {
             Write-Host $info[$i]
